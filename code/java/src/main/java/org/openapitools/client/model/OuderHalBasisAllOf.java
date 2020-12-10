@@ -28,7 +28,7 @@ import org.openapitools.client.model.OuderLinks;
 /**
  * OuderHalBasisAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-02T08:12:12.840Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-10T12:52:01.057Z[Etc/UTC]")
 public class OuderHalBasisAllOf {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)

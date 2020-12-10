@@ -23,13 +23,11 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.openapitools.client.model.NaamgebruikEnum;
-import org.openapitools.client.model.Waardetabel;
 
 /**
  * NaamPersoonAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-02T08:12:12.840Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-10T12:52:01.057Z[Etc/UTC]")
 public class NaamPersoonAllOf {
   public static final String SERIALIZED_NAME_AANHEF = "aanhef";
   @SerializedName(SERIALIZED_NAME_AANHEF)
@@ -46,14 +44,6 @@ public class NaamPersoonAllOf {
   public static final String SERIALIZED_NAME_GEBRUIK_IN_LOPENDE_TEKST = "gebruikInLopendeTekst";
   @SerializedName(SERIALIZED_NAME_GEBRUIK_IN_LOPENDE_TEKST)
   private String gebruikInLopendeTekst;
-
-  public static final String SERIALIZED_NAME_AANDUIDING_NAAMGEBRUIK = "aanduidingNaamgebruik";
-  @SerializedName(SERIALIZED_NAME_AANDUIDING_NAAMGEBRUIK)
-  private NaamgebruikEnum aanduidingNaamgebruik;
-
-  public static final String SERIALIZED_NAME_ADELLIJKE_TITEL_PREDIKAAT = "adellijkeTitelPredikaat";
-  @SerializedName(SERIALIZED_NAME_ADELLIJKE_TITEL_PREDIKAAT)
-  private Waardetabel adellijkeTitelPredikaat;
 
 
   public NaamPersoonAllOf aanhef(String aanhef) {
@@ -148,52 +138,6 @@ public class NaamPersoonAllOf {
   }
 
 
-  public NaamPersoonAllOf aanduidingNaamgebruik(NaamgebruikEnum aanduidingNaamgebruik) {
-    
-    this.aanduidingNaamgebruik = aanduidingNaamgebruik;
-    return this;
-  }
-
-   /**
-   * Get aanduidingNaamgebruik
-   * @return aanduidingNaamgebruik
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public NaamgebruikEnum getAanduidingNaamgebruik() {
-    return aanduidingNaamgebruik;
-  }
-
-
-  public void setAanduidingNaamgebruik(NaamgebruikEnum aanduidingNaamgebruik) {
-    this.aanduidingNaamgebruik = aanduidingNaamgebruik;
-  }
-
-
-  public NaamPersoonAllOf adellijkeTitelPredikaat(Waardetabel adellijkeTitelPredikaat) {
-    
-    this.adellijkeTitelPredikaat = adellijkeTitelPredikaat;
-    return this;
-  }
-
-   /**
-   * Get adellijkeTitelPredikaat
-   * @return adellijkeTitelPredikaat
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Waardetabel getAdellijkeTitelPredikaat() {
-    return adellijkeTitelPredikaat;
-  }
-
-
-  public void setAdellijkeTitelPredikaat(Waardetabel adellijkeTitelPredikaat) {
-    this.adellijkeTitelPredikaat = adellijkeTitelPredikaat;
-  }
-
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -206,14 +150,12 @@ public class NaamPersoonAllOf {
     return Objects.equals(this.aanhef, naamPersoonAllOf.aanhef) &&
         Objects.equals(this.aanschrijfwijze, naamPersoonAllOf.aanschrijfwijze) &&
         Objects.equals(this.regelVoorafgaandAanAanschrijfwijze, naamPersoonAllOf.regelVoorafgaandAanAanschrijfwijze) &&
-        Objects.equals(this.gebruikInLopendeTekst, naamPersoonAllOf.gebruikInLopendeTekst) &&
-        Objects.equals(this.aanduidingNaamgebruik, naamPersoonAllOf.aanduidingNaamgebruik) &&
-        Objects.equals(this.adellijkeTitelPredikaat, naamPersoonAllOf.adellijkeTitelPredikaat);
+        Objects.equals(this.gebruikInLopendeTekst, naamPersoonAllOf.gebruikInLopendeTekst);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aanhef, aanschrijfwijze, regelVoorafgaandAanAanschrijfwijze, gebruikInLopendeTekst, aanduidingNaamgebruik, adellijkeTitelPredikaat);
+    return Objects.hash(aanhef, aanschrijfwijze, regelVoorafgaandAanAanschrijfwijze, gebruikInLopendeTekst);
   }
 
 
@@ -225,8 +167,6 @@ public class NaamPersoonAllOf {
     sb.append("    aanschrijfwijze: ").append(toIndentedString(aanschrijfwijze)).append("\n");
     sb.append("    regelVoorafgaandAanAanschrijfwijze: ").append(toIndentedString(regelVoorafgaandAanAanschrijfwijze)).append("\n");
     sb.append("    gebruikInLopendeTekst: ").append(toIndentedString(gebruikInLopendeTekst)).append("\n");
-    sb.append("    aanduidingNaamgebruik: ").append(toIndentedString(aanduidingNaamgebruik)).append("\n");
-    sb.append("    adellijkeTitelPredikaat: ").append(toIndentedString(adellijkeTitelPredikaat)).append("\n");
     sb.append("}");
     return sb.toString();
   }

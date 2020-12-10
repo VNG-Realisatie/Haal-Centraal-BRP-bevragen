@@ -38,16 +38,12 @@ namespace Org.OpenAPITools.Model
         /// <param name="aanschrijfwijze">Samengestelde naam die je kunt gebruiken in de communicatie met de persoon. .</param>
         /// <param name="regelVoorafgaandAanAanschrijfwijze">Deze regel moet als aparte regel boven de aanschrijfwijze worden geplaatst. Komt alleen voor bij personen met een adellijke titel of predicaat. .</param>
         /// <param name="gebruikInLopendeTekst">Naam van persoon die je kunt gebruiken als je in lopende tekst (bijvoorbeeld in een brief) aan persoon refereert. .</param>
-        /// <param name="aanduidingNaamgebruik">aanduidingNaamgebruik.</param>
-        /// <param name="adellijkeTitelPredikaat">adellijkeTitelPredikaat.</param>
-        public NaamPersoonAllOf(string aanhef = default(string), string aanschrijfwijze = default(string), string regelVoorafgaandAanAanschrijfwijze = default(string), string gebruikInLopendeTekst = default(string), NaamgebruikEnum aanduidingNaamgebruik = default(NaamgebruikEnum), Waardetabel adellijkeTitelPredikaat = default(Waardetabel))
+        public NaamPersoonAllOf(string aanhef = default(string), string aanschrijfwijze = default(string), string regelVoorafgaandAanAanschrijfwijze = default(string), string gebruikInLopendeTekst = default(string))
         {
             this.Aanhef = aanhef;
             this.Aanschrijfwijze = aanschrijfwijze;
             this.RegelVoorafgaandAanAanschrijfwijze = regelVoorafgaandAanAanschrijfwijze;
             this.GebruikInLopendeTekst = gebruikInLopendeTekst;
-            this.AanduidingNaamgebruik = aanduidingNaamgebruik;
-            this.AdellijkeTitelPredikaat = adellijkeTitelPredikaat;
         }
         
         /// <summary>
@@ -79,18 +75,6 @@ namespace Org.OpenAPITools.Model
         public string GebruikInLopendeTekst { get; set; }
 
         /// <summary>
-        /// Gets or Sets AanduidingNaamgebruik
-        /// </summary>
-        [DataMember(Name="aanduidingNaamgebruik", EmitDefaultValue=false)]
-        public NaamgebruikEnum AanduidingNaamgebruik { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AdellijkeTitelPredikaat
-        /// </summary>
-        [DataMember(Name="adellijkeTitelPredikaat", EmitDefaultValue=false)]
-        public Waardetabel AdellijkeTitelPredikaat { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -102,8 +86,6 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Aanschrijfwijze: ").Append(Aanschrijfwijze).Append("\n");
             sb.Append("  RegelVoorafgaandAanAanschrijfwijze: ").Append(RegelVoorafgaandAanAanschrijfwijze).Append("\n");
             sb.Append("  GebruikInLopendeTekst: ").Append(GebruikInLopendeTekst).Append("\n");
-            sb.Append("  AanduidingNaamgebruik: ").Append(AanduidingNaamgebruik).Append("\n");
-            sb.Append("  AdellijkeTitelPredikaat: ").Append(AdellijkeTitelPredikaat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -157,16 +139,6 @@ namespace Org.OpenAPITools.Model
                     this.GebruikInLopendeTekst == input.GebruikInLopendeTekst ||
                     (this.GebruikInLopendeTekst != null &&
                     this.GebruikInLopendeTekst.Equals(input.GebruikInLopendeTekst))
-                ) && 
-                (
-                    this.AanduidingNaamgebruik == input.AanduidingNaamgebruik ||
-                    (this.AanduidingNaamgebruik != null &&
-                    this.AanduidingNaamgebruik.Equals(input.AanduidingNaamgebruik))
-                ) && 
-                (
-                    this.AdellijkeTitelPredikaat == input.AdellijkeTitelPredikaat ||
-                    (this.AdellijkeTitelPredikaat != null &&
-                    this.AdellijkeTitelPredikaat.Equals(input.AdellijkeTitelPredikaat))
                 );
         }
 
@@ -187,10 +159,6 @@ namespace Org.OpenAPITools.Model
                     hashCode = hashCode * 59 + this.RegelVoorafgaandAanAanschrijfwijze.GetHashCode();
                 if (this.GebruikInLopendeTekst != null)
                     hashCode = hashCode * 59 + this.GebruikInLopendeTekst.GetHashCode();
-                if (this.AanduidingNaamgebruik != null)
-                    hashCode = hashCode * 59 + this.AanduidingNaamgebruik.GetHashCode();
-                if (this.AdellijkeTitelPredikaat != null)
-                    hashCode = hashCode * 59 + this.AdellijkeTitelPredikaat.GetHashCode();
                 return hashCode;
             }
         }

@@ -36,6 +36,7 @@ class NaamInOnderzoek(object):
         'geslachtsnaam': 'bool',
         'voornamen': 'bool',
         'voorvoegsel': 'bool',
+        'adellijke_titel_predikaat': 'bool',
         'datum_ingang_onderzoek': 'DatumOnvolledig'
     }
 
@@ -43,10 +44,11 @@ class NaamInOnderzoek(object):
         'geslachtsnaam': 'geslachtsnaam',
         'voornamen': 'voornamen',
         'voorvoegsel': 'voorvoegsel',
+        'adellijke_titel_predikaat': 'adellijkeTitelPredikaat',
         'datum_ingang_onderzoek': 'datumIngangOnderzoek'
     }
 
-    def __init__(self, geslachtsnaam=None, voornamen=None, voorvoegsel=None, datum_ingang_onderzoek=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, geslachtsnaam=None, voornamen=None, voorvoegsel=None, adellijke_titel_predikaat=None, datum_ingang_onderzoek=None, local_vars_configuration=None):  # noqa: E501
         """NaamInOnderzoek - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -55,6 +57,7 @@ class NaamInOnderzoek(object):
         self._geslachtsnaam = None
         self._voornamen = None
         self._voorvoegsel = None
+        self._adellijke_titel_predikaat = None
         self._datum_ingang_onderzoek = None
         self.discriminator = None
 
@@ -64,6 +67,8 @@ class NaamInOnderzoek(object):
             self.voornamen = voornamen
         if voorvoegsel is not None:
             self.voorvoegsel = voorvoegsel
+        if adellijke_titel_predikaat is not None:
+            self.adellijke_titel_predikaat = adellijke_titel_predikaat
         if datum_ingang_onderzoek is not None:
             self.datum_ingang_onderzoek = datum_ingang_onderzoek
 
@@ -129,6 +134,27 @@ class NaamInOnderzoek(object):
         """
 
         self._voorvoegsel = voorvoegsel
+
+    @property
+    def adellijke_titel_predikaat(self):
+        """Gets the adellijke_titel_predikaat of this NaamInOnderzoek.  # noqa: E501
+
+
+        :return: The adellijke_titel_predikaat of this NaamInOnderzoek.  # noqa: E501
+        :rtype: bool
+        """
+        return self._adellijke_titel_predikaat
+
+    @adellijke_titel_predikaat.setter
+    def adellijke_titel_predikaat(self, adellijke_titel_predikaat):
+        """Sets the adellijke_titel_predikaat of this NaamInOnderzoek.
+
+
+        :param adellijke_titel_predikaat: The adellijke_titel_predikaat of this NaamInOnderzoek.  # noqa: E501
+        :type: bool
+        """
+
+        self._adellijke_titel_predikaat = adellijke_titel_predikaat
 
     @property
     def datum_ingang_onderzoek(self):

@@ -37,12 +37,14 @@ namespace Org.OpenAPITools.Model
         /// <param name="geslachtsnaam">geslachtsnaam.</param>
         /// <param name="voornamen">voornamen.</param>
         /// <param name="voorvoegsel">voorvoegsel.</param>
+        /// <param name="adellijkeTitelPredikaat">adellijkeTitelPredikaat.</param>
         /// <param name="datumIngangOnderzoek">datumIngangOnderzoek.</param>
-        public NaamInOnderzoek(bool geslachtsnaam = default(bool), bool voornamen = default(bool), bool voorvoegsel = default(bool), DatumOnvolledig datumIngangOnderzoek = default(DatumOnvolledig))
+        public NaamInOnderzoek(bool geslachtsnaam = default(bool), bool voornamen = default(bool), bool voorvoegsel = default(bool), bool adellijkeTitelPredikaat = default(bool), DatumOnvolledig datumIngangOnderzoek = default(DatumOnvolledig))
         {
             this.Geslachtsnaam = geslachtsnaam;
             this.Voornamen = voornamen;
             this.Voorvoegsel = voorvoegsel;
+            this.AdellijkeTitelPredikaat = adellijkeTitelPredikaat;
             this.DatumIngangOnderzoek = datumIngangOnderzoek;
         }
         
@@ -65,6 +67,12 @@ namespace Org.OpenAPITools.Model
         public bool Voorvoegsel { get; set; }
 
         /// <summary>
+        /// Gets or Sets AdellijkeTitelPredikaat
+        /// </summary>
+        [DataMember(Name="adellijkeTitelPredikaat", EmitDefaultValue=false)]
+        public bool AdellijkeTitelPredikaat { get; set; }
+
+        /// <summary>
         /// Gets or Sets DatumIngangOnderzoek
         /// </summary>
         [DataMember(Name="datumIngangOnderzoek", EmitDefaultValue=false)]
@@ -81,6 +89,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Geslachtsnaam: ").Append(Geslachtsnaam).Append("\n");
             sb.Append("  Voornamen: ").Append(Voornamen).Append("\n");
             sb.Append("  Voorvoegsel: ").Append(Voorvoegsel).Append("\n");
+            sb.Append("  AdellijkeTitelPredikaat: ").Append(AdellijkeTitelPredikaat).Append("\n");
             sb.Append("  DatumIngangOnderzoek: ").Append(DatumIngangOnderzoek).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -129,6 +138,10 @@ namespace Org.OpenAPITools.Model
                     this.Voorvoegsel.Equals(input.Voorvoegsel)
                 ) && 
                 (
+                    this.AdellijkeTitelPredikaat == input.AdellijkeTitelPredikaat ||
+                    this.AdellijkeTitelPredikaat.Equals(input.AdellijkeTitelPredikaat)
+                ) && 
+                (
                     this.DatumIngangOnderzoek == input.DatumIngangOnderzoek ||
                     (this.DatumIngangOnderzoek != null &&
                     this.DatumIngangOnderzoek.Equals(input.DatumIngangOnderzoek))
@@ -147,6 +160,7 @@ namespace Org.OpenAPITools.Model
                 hashCode = hashCode * 59 + this.Geslachtsnaam.GetHashCode();
                 hashCode = hashCode * 59 + this.Voornamen.GetHashCode();
                 hashCode = hashCode * 59 + this.Voorvoegsel.GetHashCode();
+                hashCode = hashCode * 59 + this.AdellijkeTitelPredikaat.GetHashCode();
                 if (this.DatumIngangOnderzoek != null)
                     hashCode = hashCode * 59 + this.DatumIngangOnderzoek.GetHashCode();
                 return hashCode;

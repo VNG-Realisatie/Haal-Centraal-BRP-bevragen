@@ -17,6 +17,8 @@ servers:
 - description: |
     APILAB testserver
   url: https://www.haalcentraal.nl/haalcentraal/api/brp
+tags:
+- name: Ingeschreven Personen
 paths:
   /ingeschrevenpersonen:
     get:
@@ -2032,6 +2034,10 @@ components:
         voorvoegsel:
           example: de
           type: string
+        aanduidingNaamgebruik:
+          $ref: '#/components/schemas/Naamgebruik_enum'
+        adellijkeTitelPredikaat:
+          $ref: '#/components/schemas/Waardetabel'
         inOnderzoek:
           $ref: '#/components/schemas/NaamInOnderzoek'
       type: object
@@ -2044,6 +2050,8 @@ components:
         voornamen:
           type: boolean
         voorvoegsel:
+          type: boolean
+        adellijkeTitelPredikaat:
           type: boolean
         datumIngangOnderzoek:
           $ref: '#/components/schemas/DatumOnvolledig'
@@ -2733,10 +2741,6 @@ components:
             Naam van persoon die je kunt gebruiken als je in lopende tekst (bijvoorbeeld in een brief) aan persoon refereert.
           example: baron Van den Aedel
           type: string
-        aanduidingNaamgebruik:
-          $ref: '#/components/schemas/Naamgebruik_enum'
-        adellijkeTitelPredikaat:
-          $ref: '#/components/schemas/Waardetabel'
     Verblijfplaats_allOf:
       description: |
         Gegevens over het verblijf of de woonlocatie van een persoon.

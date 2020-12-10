@@ -32,7 +32,7 @@ import org.openapitools.client.model.Waardetabel;
 /**
  * NaamPersoon
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-02T08:12:12.840Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-10T12:52:01.057Z[Etc/UTC]")
 public class NaamPersoon {
   public static final String SERIALIZED_NAME_GESLACHTSNAAM = "geslachtsnaam";
   @SerializedName(SERIALIZED_NAME_GESLACHTSNAAM)
@@ -49,6 +49,14 @@ public class NaamPersoon {
   public static final String SERIALIZED_NAME_VOORVOEGSEL = "voorvoegsel";
   @SerializedName(SERIALIZED_NAME_VOORVOEGSEL)
   private String voorvoegsel;
+
+  public static final String SERIALIZED_NAME_AANDUIDING_NAAMGEBRUIK = "aanduidingNaamgebruik";
+  @SerializedName(SERIALIZED_NAME_AANDUIDING_NAAMGEBRUIK)
+  private NaamgebruikEnum aanduidingNaamgebruik;
+
+  public static final String SERIALIZED_NAME_ADELLIJKE_TITEL_PREDIKAAT = "adellijkeTitelPredikaat";
+  @SerializedName(SERIALIZED_NAME_ADELLIJKE_TITEL_PREDIKAAT)
+  private Waardetabel adellijkeTitelPredikaat;
 
   public static final String SERIALIZED_NAME_IN_ONDERZOEK = "inOnderzoek";
   @SerializedName(SERIALIZED_NAME_IN_ONDERZOEK)
@@ -69,14 +77,6 @@ public class NaamPersoon {
   public static final String SERIALIZED_NAME_GEBRUIK_IN_LOPENDE_TEKST = "gebruikInLopendeTekst";
   @SerializedName(SERIALIZED_NAME_GEBRUIK_IN_LOPENDE_TEKST)
   private String gebruikInLopendeTekst;
-
-  public static final String SERIALIZED_NAME_AANDUIDING_NAAMGEBRUIK = "aanduidingNaamgebruik";
-  @SerializedName(SERIALIZED_NAME_AANDUIDING_NAAMGEBRUIK)
-  private NaamgebruikEnum aanduidingNaamgebruik;
-
-  public static final String SERIALIZED_NAME_ADELLIJKE_TITEL_PREDIKAAT = "adellijkeTitelPredikaat";
-  @SerializedName(SERIALIZED_NAME_ADELLIJKE_TITEL_PREDIKAAT)
-  private Waardetabel adellijkeTitelPredikaat;
 
 
   public NaamPersoon geslachtsnaam(String geslachtsnaam) {
@@ -168,6 +168,52 @@ public class NaamPersoon {
 
   public void setVoorvoegsel(String voorvoegsel) {
     this.voorvoegsel = voorvoegsel;
+  }
+
+
+  public NaamPersoon aanduidingNaamgebruik(NaamgebruikEnum aanduidingNaamgebruik) {
+    
+    this.aanduidingNaamgebruik = aanduidingNaamgebruik;
+    return this;
+  }
+
+   /**
+   * Get aanduidingNaamgebruik
+   * @return aanduidingNaamgebruik
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NaamgebruikEnum getAanduidingNaamgebruik() {
+    return aanduidingNaamgebruik;
+  }
+
+
+  public void setAanduidingNaamgebruik(NaamgebruikEnum aanduidingNaamgebruik) {
+    this.aanduidingNaamgebruik = aanduidingNaamgebruik;
+  }
+
+
+  public NaamPersoon adellijkeTitelPredikaat(Waardetabel adellijkeTitelPredikaat) {
+    
+    this.adellijkeTitelPredikaat = adellijkeTitelPredikaat;
+    return this;
+  }
+
+   /**
+   * Get adellijkeTitelPredikaat
+   * @return adellijkeTitelPredikaat
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Waardetabel getAdellijkeTitelPredikaat() {
+    return adellijkeTitelPredikaat;
+  }
+
+
+  public void setAdellijkeTitelPredikaat(Waardetabel adellijkeTitelPredikaat) {
+    this.adellijkeTitelPredikaat = adellijkeTitelPredikaat;
   }
 
 
@@ -286,52 +332,6 @@ public class NaamPersoon {
   }
 
 
-  public NaamPersoon aanduidingNaamgebruik(NaamgebruikEnum aanduidingNaamgebruik) {
-    
-    this.aanduidingNaamgebruik = aanduidingNaamgebruik;
-    return this;
-  }
-
-   /**
-   * Get aanduidingNaamgebruik
-   * @return aanduidingNaamgebruik
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public NaamgebruikEnum getAanduidingNaamgebruik() {
-    return aanduidingNaamgebruik;
-  }
-
-
-  public void setAanduidingNaamgebruik(NaamgebruikEnum aanduidingNaamgebruik) {
-    this.aanduidingNaamgebruik = aanduidingNaamgebruik;
-  }
-
-
-  public NaamPersoon adellijkeTitelPredikaat(Waardetabel adellijkeTitelPredikaat) {
-    
-    this.adellijkeTitelPredikaat = adellijkeTitelPredikaat;
-    return this;
-  }
-
-   /**
-   * Get adellijkeTitelPredikaat
-   * @return adellijkeTitelPredikaat
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Waardetabel getAdellijkeTitelPredikaat() {
-    return adellijkeTitelPredikaat;
-  }
-
-
-  public void setAdellijkeTitelPredikaat(Waardetabel adellijkeTitelPredikaat) {
-    this.adellijkeTitelPredikaat = adellijkeTitelPredikaat;
-  }
-
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -345,18 +345,18 @@ public class NaamPersoon {
         Objects.equals(this.voorletters, naamPersoon.voorletters) &&
         Objects.equals(this.voornamen, naamPersoon.voornamen) &&
         Objects.equals(this.voorvoegsel, naamPersoon.voorvoegsel) &&
+        Objects.equals(this.aanduidingNaamgebruik, naamPersoon.aanduidingNaamgebruik) &&
+        Objects.equals(this.adellijkeTitelPredikaat, naamPersoon.adellijkeTitelPredikaat) &&
         Objects.equals(this.inOnderzoek, naamPersoon.inOnderzoek) &&
         Objects.equals(this.aanhef, naamPersoon.aanhef) &&
         Objects.equals(this.aanschrijfwijze, naamPersoon.aanschrijfwijze) &&
         Objects.equals(this.regelVoorafgaandAanAanschrijfwijze, naamPersoon.regelVoorafgaandAanAanschrijfwijze) &&
-        Objects.equals(this.gebruikInLopendeTekst, naamPersoon.gebruikInLopendeTekst) &&
-        Objects.equals(this.aanduidingNaamgebruik, naamPersoon.aanduidingNaamgebruik) &&
-        Objects.equals(this.adellijkeTitelPredikaat, naamPersoon.adellijkeTitelPredikaat);
+        Objects.equals(this.gebruikInLopendeTekst, naamPersoon.gebruikInLopendeTekst);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(geslachtsnaam, voorletters, voornamen, voorvoegsel, inOnderzoek, aanhef, aanschrijfwijze, regelVoorafgaandAanAanschrijfwijze, gebruikInLopendeTekst, aanduidingNaamgebruik, adellijkeTitelPredikaat);
+    return Objects.hash(geslachtsnaam, voorletters, voornamen, voorvoegsel, aanduidingNaamgebruik, adellijkeTitelPredikaat, inOnderzoek, aanhef, aanschrijfwijze, regelVoorafgaandAanAanschrijfwijze, gebruikInLopendeTekst);
   }
 
 
@@ -368,13 +368,13 @@ public class NaamPersoon {
     sb.append("    voorletters: ").append(toIndentedString(voorletters)).append("\n");
     sb.append("    voornamen: ").append(toIndentedString(voornamen)).append("\n");
     sb.append("    voorvoegsel: ").append(toIndentedString(voorvoegsel)).append("\n");
+    sb.append("    aanduidingNaamgebruik: ").append(toIndentedString(aanduidingNaamgebruik)).append("\n");
+    sb.append("    adellijkeTitelPredikaat: ").append(toIndentedString(adellijkeTitelPredikaat)).append("\n");
     sb.append("    inOnderzoek: ").append(toIndentedString(inOnderzoek)).append("\n");
     sb.append("    aanhef: ").append(toIndentedString(aanhef)).append("\n");
     sb.append("    aanschrijfwijze: ").append(toIndentedString(aanschrijfwijze)).append("\n");
     sb.append("    regelVoorafgaandAanAanschrijfwijze: ").append(toIndentedString(regelVoorafgaandAanAanschrijfwijze)).append("\n");
     sb.append("    gebruikInLopendeTekst: ").append(toIndentedString(gebruikInLopendeTekst)).append("\n");
-    sb.append("    aanduidingNaamgebruik: ").append(toIndentedString(aanduidingNaamgebruik)).append("\n");
-    sb.append("    adellijkeTitelPredikaat: ").append(toIndentedString(adellijkeTitelPredikaat)).append("\n");
     sb.append("}");
     return sb.toString();
   }

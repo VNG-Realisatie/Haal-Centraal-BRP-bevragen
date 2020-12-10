@@ -37,13 +37,13 @@ class NaamPersoon(object):
         'voorletters': 'str',
         'voornamen': 'str',
         'voorvoegsel': 'str',
+        'aanduiding_naamgebruik': 'NaamgebruikEnum',
+        'adellijke_titel_predikaat': 'Waardetabel',
         'in_onderzoek': 'NaamInOnderzoek',
         'aanhef': 'str',
         'aanschrijfwijze': 'str',
         'regel_voorafgaand_aan_aanschrijfwijze': 'str',
-        'gebruik_in_lopende_tekst': 'str',
-        'aanduiding_naamgebruik': 'NaamgebruikEnum',
-        'adellijke_titel_predikaat': 'Waardetabel'
+        'gebruik_in_lopende_tekst': 'str'
     }
 
     attribute_map = {
@@ -51,16 +51,16 @@ class NaamPersoon(object):
         'voorletters': 'voorletters',
         'voornamen': 'voornamen',
         'voorvoegsel': 'voorvoegsel',
+        'aanduiding_naamgebruik': 'aanduidingNaamgebruik',
+        'adellijke_titel_predikaat': 'adellijkeTitelPredikaat',
         'in_onderzoek': 'inOnderzoek',
         'aanhef': 'aanhef',
         'aanschrijfwijze': 'aanschrijfwijze',
         'regel_voorafgaand_aan_aanschrijfwijze': 'regelVoorafgaandAanAanschrijfwijze',
-        'gebruik_in_lopende_tekst': 'gebruikInLopendeTekst',
-        'aanduiding_naamgebruik': 'aanduidingNaamgebruik',
-        'adellijke_titel_predikaat': 'adellijkeTitelPredikaat'
+        'gebruik_in_lopende_tekst': 'gebruikInLopendeTekst'
     }
 
-    def __init__(self, geslachtsnaam=None, voorletters=None, voornamen=None, voorvoegsel=None, in_onderzoek=None, aanhef=None, aanschrijfwijze=None, regel_voorafgaand_aan_aanschrijfwijze=None, gebruik_in_lopende_tekst=None, aanduiding_naamgebruik=None, adellijke_titel_predikaat=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, geslachtsnaam=None, voorletters=None, voornamen=None, voorvoegsel=None, aanduiding_naamgebruik=None, adellijke_titel_predikaat=None, in_onderzoek=None, aanhef=None, aanschrijfwijze=None, regel_voorafgaand_aan_aanschrijfwijze=None, gebruik_in_lopende_tekst=None, local_vars_configuration=None):  # noqa: E501
         """NaamPersoon - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -70,13 +70,13 @@ class NaamPersoon(object):
         self._voorletters = None
         self._voornamen = None
         self._voorvoegsel = None
+        self._aanduiding_naamgebruik = None
+        self._adellijke_titel_predikaat = None
         self._in_onderzoek = None
         self._aanhef = None
         self._aanschrijfwijze = None
         self._regel_voorafgaand_aan_aanschrijfwijze = None
         self._gebruik_in_lopende_tekst = None
-        self._aanduiding_naamgebruik = None
-        self._adellijke_titel_predikaat = None
         self.discriminator = None
 
         if geslachtsnaam is not None:
@@ -87,6 +87,10 @@ class NaamPersoon(object):
             self.voornamen = voornamen
         if voorvoegsel is not None:
             self.voorvoegsel = voorvoegsel
+        if aanduiding_naamgebruik is not None:
+            self.aanduiding_naamgebruik = aanduiding_naamgebruik
+        if adellijke_titel_predikaat is not None:
+            self.adellijke_titel_predikaat = adellijke_titel_predikaat
         if in_onderzoek is not None:
             self.in_onderzoek = in_onderzoek
         if aanhef is not None:
@@ -97,10 +101,6 @@ class NaamPersoon(object):
             self.regel_voorafgaand_aan_aanschrijfwijze = regel_voorafgaand_aan_aanschrijfwijze
         if gebruik_in_lopende_tekst is not None:
             self.gebruik_in_lopende_tekst = gebruik_in_lopende_tekst
-        if aanduiding_naamgebruik is not None:
-            self.aanduiding_naamgebruik = aanduiding_naamgebruik
-        if adellijke_titel_predikaat is not None:
-            self.adellijke_titel_predikaat = adellijke_titel_predikaat
 
     @property
     def geslachtsnaam(self):
@@ -191,6 +191,48 @@ class NaamPersoon(object):
         """
 
         self._voorvoegsel = voorvoegsel
+
+    @property
+    def aanduiding_naamgebruik(self):
+        """Gets the aanduiding_naamgebruik of this NaamPersoon.  # noqa: E501
+
+
+        :return: The aanduiding_naamgebruik of this NaamPersoon.  # noqa: E501
+        :rtype: NaamgebruikEnum
+        """
+        return self._aanduiding_naamgebruik
+
+    @aanduiding_naamgebruik.setter
+    def aanduiding_naamgebruik(self, aanduiding_naamgebruik):
+        """Sets the aanduiding_naamgebruik of this NaamPersoon.
+
+
+        :param aanduiding_naamgebruik: The aanduiding_naamgebruik of this NaamPersoon.  # noqa: E501
+        :type: NaamgebruikEnum
+        """
+
+        self._aanduiding_naamgebruik = aanduiding_naamgebruik
+
+    @property
+    def adellijke_titel_predikaat(self):
+        """Gets the adellijke_titel_predikaat of this NaamPersoon.  # noqa: E501
+
+
+        :return: The adellijke_titel_predikaat of this NaamPersoon.  # noqa: E501
+        :rtype: Waardetabel
+        """
+        return self._adellijke_titel_predikaat
+
+    @adellijke_titel_predikaat.setter
+    def adellijke_titel_predikaat(self, adellijke_titel_predikaat):
+        """Sets the adellijke_titel_predikaat of this NaamPersoon.
+
+
+        :param adellijke_titel_predikaat: The adellijke_titel_predikaat of this NaamPersoon.  # noqa: E501
+        :type: Waardetabel
+        """
+
+        self._adellijke_titel_predikaat = adellijke_titel_predikaat
 
     @property
     def in_onderzoek(self):
@@ -304,48 +346,6 @@ class NaamPersoon(object):
         """
 
         self._gebruik_in_lopende_tekst = gebruik_in_lopende_tekst
-
-    @property
-    def aanduiding_naamgebruik(self):
-        """Gets the aanduiding_naamgebruik of this NaamPersoon.  # noqa: E501
-
-
-        :return: The aanduiding_naamgebruik of this NaamPersoon.  # noqa: E501
-        :rtype: NaamgebruikEnum
-        """
-        return self._aanduiding_naamgebruik
-
-    @aanduiding_naamgebruik.setter
-    def aanduiding_naamgebruik(self, aanduiding_naamgebruik):
-        """Sets the aanduiding_naamgebruik of this NaamPersoon.
-
-
-        :param aanduiding_naamgebruik: The aanduiding_naamgebruik of this NaamPersoon.  # noqa: E501
-        :type: NaamgebruikEnum
-        """
-
-        self._aanduiding_naamgebruik = aanduiding_naamgebruik
-
-    @property
-    def adellijke_titel_predikaat(self):
-        """Gets the adellijke_titel_predikaat of this NaamPersoon.  # noqa: E501
-
-
-        :return: The adellijke_titel_predikaat of this NaamPersoon.  # noqa: E501
-        :rtype: Waardetabel
-        """
-        return self._adellijke_titel_predikaat
-
-    @adellijke_titel_predikaat.setter
-    def adellijke_titel_predikaat(self, adellijke_titel_predikaat):
-        """Sets the adellijke_titel_predikaat of this NaamPersoon.
-
-
-        :param adellijke_titel_predikaat: The adellijke_titel_predikaat of this NaamPersoon.  # noqa: E501
-        :type: Waardetabel
-        """
-
-        self._adellijke_titel_predikaat = adellijke_titel_predikaat
 
     def to_dict(self):
         """Returns the model properties as a dict"""
