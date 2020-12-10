@@ -53,6 +53,8 @@ from openapi_client.models.kind_in_onderzoek import KindInOnderzoek
 from openapi_client.models.kind_links import KindLinks
 from openapi_client.models.naam import Naam
 from openapi_client.models.naam_in_onderzoek import NaamInOnderzoek
+from openapi_client.models.naam_in_onderzoek_uitgebreid import NaamInOnderzoekUitgebreid
+from openapi_client.models.naam_in_onderzoek_uitgebreid_all_of import NaamInOnderzoekUitgebreidAllOf
 from openapi_client.models.naam_persoon import NaamPersoon
 from openapi_client.models.naam_persoon_all_of import NaamPersoonAllOf
 from openapi_client.models.naamgebruik_enum import NaamgebruikEnum

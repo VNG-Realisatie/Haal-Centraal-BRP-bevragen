@@ -24,13 +24,14 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.openapitools.client.model.DatumOnvolledig;
+import org.openapitools.client.model.NaamInOnderzoek;
+import org.openapitools.client.model.NaamInOnderzoekUitgebreidAllOf;
 
 /**
- * Geeft aan welke gegevens over de naam in onderzoek zijn. Zie de [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-bevragen/blob/v1.1.0/features/in_onderzoek.feature) 
+ * NaamInOnderzoekUitgebreid
  */
-@ApiModel(description = "Geeft aan welke gegevens over de naam in onderzoek zijn. Zie de [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-bevragen/blob/v1.1.0/features/in_onderzoek.feature) ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-10T12:50:17.442Z[Etc/UTC]")
-public class NaamInOnderzoek {
+public class NaamInOnderzoekUitgebreid {
   public static final String SERIALIZED_NAME_GESLACHTSNAAM = "geslachtsnaam";
   @SerializedName(SERIALIZED_NAME_GESLACHTSNAAM)
   private Boolean geslachtsnaam;
@@ -47,8 +48,12 @@ public class NaamInOnderzoek {
   @SerializedName(SERIALIZED_NAME_DATUM_INGANG_ONDERZOEK)
   private DatumOnvolledig datumIngangOnderzoek;
 
+  public static final String SERIALIZED_NAME_ADELLIJKE_TITEL_PREDIKAAT = "adellijkeTitelPredikaat";
+  @SerializedName(SERIALIZED_NAME_ADELLIJKE_TITEL_PREDIKAAT)
+  private Boolean adellijkeTitelPredikaat;
 
-  public NaamInOnderzoek geslachtsnaam(Boolean geslachtsnaam) {
+
+  public NaamInOnderzoekUitgebreid geslachtsnaam(Boolean geslachtsnaam) {
     
     this.geslachtsnaam = geslachtsnaam;
     return this;
@@ -71,7 +76,7 @@ public class NaamInOnderzoek {
   }
 
 
-  public NaamInOnderzoek voornamen(Boolean voornamen) {
+  public NaamInOnderzoekUitgebreid voornamen(Boolean voornamen) {
     
     this.voornamen = voornamen;
     return this;
@@ -94,7 +99,7 @@ public class NaamInOnderzoek {
   }
 
 
-  public NaamInOnderzoek voorvoegsel(Boolean voorvoegsel) {
+  public NaamInOnderzoekUitgebreid voorvoegsel(Boolean voorvoegsel) {
     
     this.voorvoegsel = voorvoegsel;
     return this;
@@ -117,7 +122,7 @@ public class NaamInOnderzoek {
   }
 
 
-  public NaamInOnderzoek datumIngangOnderzoek(DatumOnvolledig datumIngangOnderzoek) {
+  public NaamInOnderzoekUitgebreid datumIngangOnderzoek(DatumOnvolledig datumIngangOnderzoek) {
     
     this.datumIngangOnderzoek = datumIngangOnderzoek;
     return this;
@@ -140,6 +145,29 @@ public class NaamInOnderzoek {
   }
 
 
+  public NaamInOnderzoekUitgebreid adellijkeTitelPredikaat(Boolean adellijkeTitelPredikaat) {
+    
+    this.adellijkeTitelPredikaat = adellijkeTitelPredikaat;
+    return this;
+  }
+
+   /**
+   * Get adellijkeTitelPredikaat
+   * @return adellijkeTitelPredikaat
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getAdellijkeTitelPredikaat() {
+    return adellijkeTitelPredikaat;
+  }
+
+
+  public void setAdellijkeTitelPredikaat(Boolean adellijkeTitelPredikaat) {
+    this.adellijkeTitelPredikaat = adellijkeTitelPredikaat;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -148,27 +176,29 @@ public class NaamInOnderzoek {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    NaamInOnderzoek naamInOnderzoek = (NaamInOnderzoek) o;
-    return Objects.equals(this.geslachtsnaam, naamInOnderzoek.geslachtsnaam) &&
-        Objects.equals(this.voornamen, naamInOnderzoek.voornamen) &&
-        Objects.equals(this.voorvoegsel, naamInOnderzoek.voorvoegsel) &&
-        Objects.equals(this.datumIngangOnderzoek, naamInOnderzoek.datumIngangOnderzoek);
+    NaamInOnderzoekUitgebreid naamInOnderzoekUitgebreid = (NaamInOnderzoekUitgebreid) o;
+    return Objects.equals(this.geslachtsnaam, naamInOnderzoekUitgebreid.geslachtsnaam) &&
+        Objects.equals(this.voornamen, naamInOnderzoekUitgebreid.voornamen) &&
+        Objects.equals(this.voorvoegsel, naamInOnderzoekUitgebreid.voorvoegsel) &&
+        Objects.equals(this.datumIngangOnderzoek, naamInOnderzoekUitgebreid.datumIngangOnderzoek) &&
+        Objects.equals(this.adellijkeTitelPredikaat, naamInOnderzoekUitgebreid.adellijkeTitelPredikaat);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(geslachtsnaam, voornamen, voorvoegsel, datumIngangOnderzoek);
+    return Objects.hash(geslachtsnaam, voornamen, voorvoegsel, datumIngangOnderzoek, adellijkeTitelPredikaat);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class NaamInOnderzoek {\n");
+    sb.append("class NaamInOnderzoekUitgebreid {\n");
     sb.append("    geslachtsnaam: ").append(toIndentedString(geslachtsnaam)).append("\n");
     sb.append("    voornamen: ").append(toIndentedString(voornamen)).append("\n");
     sb.append("    voorvoegsel: ").append(toIndentedString(voorvoegsel)).append("\n");
     sb.append("    datumIngangOnderzoek: ").append(toIndentedString(datumIngangOnderzoek)).append("\n");
+    sb.append("    adellijkeTitelPredikaat: ").append(toIndentedString(adellijkeTitelPredikaat)).append("\n");
     sb.append("}");
     return sb.toString();
   }

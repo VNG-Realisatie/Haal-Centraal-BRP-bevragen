@@ -17,6 +17,8 @@ servers:
 - description: |
     APILAB testserver
   url: https://www.haalcentraal.nl/haalcentraal/api/brp
+tags:
+- name: Ingeschreven Personen
 paths:
   /ingeschrevenpersonen:
     get:
@@ -2048,6 +2050,10 @@ components:
         datumIngangOnderzoek:
           $ref: '#/components/schemas/DatumOnvolledig'
       type: object
+    NaamInOnderzoekUitgebreid:
+      allOf:
+      - $ref: '#/components/schemas/NaamInOnderzoek'
+      - $ref: '#/components/schemas/NaamInOnderzoekUitgebreid_allOf'
     OuderInOnderzoek:
       description: |
         Geeft aan welke gegevens van de de ouder in onderzoek zijn. Zie de [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-bevragen/blob/v1.1.0/features/in_onderzoek.feature)
@@ -2698,6 +2704,10 @@ components:
       properties:
         _links:
           $ref: '#/components/schemas/PartnerLinks'
+    NaamInOnderzoekUitgebreid_allOf:
+      properties:
+        adellijkeTitelPredikaat:
+          type: boolean
     Geboorte_allOf:
       description: |
         Gegevens over de geboorte.
@@ -2737,6 +2747,8 @@ components:
           $ref: '#/components/schemas/Naamgebruik_enum'
         adellijkeTitelPredikaat:
           $ref: '#/components/schemas/Waardetabel'
+        inOnderzoek:
+          $ref: '#/components/schemas/NaamInOnderzoekUitgebreid'
     Verblijfplaats_allOf:
       description: |
         Gegevens over het verblijf of de woonlocatie van een persoon.

@@ -23,13 +23,14 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.openapitools.client.model.NaamInOnderzoekUitgebreid;
 import org.openapitools.client.model.NaamgebruikEnum;
 import org.openapitools.client.model.Waardetabel;
 
 /**
  * NaamPersoonAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-02T08:12:12.840Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-10T12:50:17.442Z[Etc/UTC]")
 public class NaamPersoonAllOf {
   public static final String SERIALIZED_NAME_AANHEF = "aanhef";
   @SerializedName(SERIALIZED_NAME_AANHEF)
@@ -54,6 +55,10 @@ public class NaamPersoonAllOf {
   public static final String SERIALIZED_NAME_ADELLIJKE_TITEL_PREDIKAAT = "adellijkeTitelPredikaat";
   @SerializedName(SERIALIZED_NAME_ADELLIJKE_TITEL_PREDIKAAT)
   private Waardetabel adellijkeTitelPredikaat;
+
+  public static final String SERIALIZED_NAME_IN_ONDERZOEK = "inOnderzoek";
+  @SerializedName(SERIALIZED_NAME_IN_ONDERZOEK)
+  private NaamInOnderzoekUitgebreid inOnderzoek = null;
 
 
   public NaamPersoonAllOf aanhef(String aanhef) {
@@ -194,6 +199,29 @@ public class NaamPersoonAllOf {
   }
 
 
+  public NaamPersoonAllOf inOnderzoek(NaamInOnderzoekUitgebreid inOnderzoek) {
+    
+    this.inOnderzoek = inOnderzoek;
+    return this;
+  }
+
+   /**
+   * Get inOnderzoek
+   * @return inOnderzoek
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NaamInOnderzoekUitgebreid getInOnderzoek() {
+    return inOnderzoek;
+  }
+
+
+  public void setInOnderzoek(NaamInOnderzoekUitgebreid inOnderzoek) {
+    this.inOnderzoek = inOnderzoek;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -208,12 +236,13 @@ public class NaamPersoonAllOf {
         Objects.equals(this.regelVoorafgaandAanAanschrijfwijze, naamPersoonAllOf.regelVoorafgaandAanAanschrijfwijze) &&
         Objects.equals(this.gebruikInLopendeTekst, naamPersoonAllOf.gebruikInLopendeTekst) &&
         Objects.equals(this.aanduidingNaamgebruik, naamPersoonAllOf.aanduidingNaamgebruik) &&
-        Objects.equals(this.adellijkeTitelPredikaat, naamPersoonAllOf.adellijkeTitelPredikaat);
+        Objects.equals(this.adellijkeTitelPredikaat, naamPersoonAllOf.adellijkeTitelPredikaat) &&
+        Objects.equals(this.inOnderzoek, naamPersoonAllOf.inOnderzoek);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aanhef, aanschrijfwijze, regelVoorafgaandAanAanschrijfwijze, gebruikInLopendeTekst, aanduidingNaamgebruik, adellijkeTitelPredikaat);
+    return Objects.hash(aanhef, aanschrijfwijze, regelVoorafgaandAanAanschrijfwijze, gebruikInLopendeTekst, aanduidingNaamgebruik, adellijkeTitelPredikaat, inOnderzoek);
   }
 
 
@@ -227,6 +256,7 @@ public class NaamPersoonAllOf {
     sb.append("    gebruikInLopendeTekst: ").append(toIndentedString(gebruikInLopendeTekst)).append("\n");
     sb.append("    aanduidingNaamgebruik: ").append(toIndentedString(aanduidingNaamgebruik)).append("\n");
     sb.append("    adellijkeTitelPredikaat: ").append(toIndentedString(adellijkeTitelPredikaat)).append("\n");
+    sb.append("    inOnderzoek: ").append(toIndentedString(inOnderzoek)).append("\n");
     sb.append("}");
     return sb.toString();
   }

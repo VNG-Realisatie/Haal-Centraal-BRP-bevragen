@@ -37,7 +37,7 @@ class NaamPersoon(object):
         'voorletters': 'str',
         'voornamen': 'str',
         'voorvoegsel': 'str',
-        'in_onderzoek': 'NaamInOnderzoek',
+        'in_onderzoek': 'NaamInOnderzoekUitgebreid',
         'aanhef': 'str',
         'aanschrijfwijze': 'str',
         'regel_voorafgaand_aan_aanschrijfwijze': 'str',
@@ -198,7 +198,7 @@ class NaamPersoon(object):
 
 
         :return: The in_onderzoek of this NaamPersoon.  # noqa: E501
-        :rtype: NaamInOnderzoek
+        :rtype: NaamInOnderzoekUitgebreid
         """
         return self._in_onderzoek
 
@@ -208,7 +208,7 @@ class NaamPersoon(object):
 
 
         :param in_onderzoek: The in_onderzoek of this NaamPersoon.  # noqa: E501
-        :type: NaamInOnderzoek
+        :type: NaamInOnderzoekUitgebreid
         """
 
         self._in_onderzoek = in_onderzoek

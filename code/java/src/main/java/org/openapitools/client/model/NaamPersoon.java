@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.openapitools.client.model.Naam;
-import org.openapitools.client.model.NaamInOnderzoek;
+import org.openapitools.client.model.NaamInOnderzoekUitgebreid;
 import org.openapitools.client.model.NaamPersoonAllOf;
 import org.openapitools.client.model.NaamgebruikEnum;
 import org.openapitools.client.model.Waardetabel;
@@ -32,7 +32,7 @@ import org.openapitools.client.model.Waardetabel;
 /**
  * NaamPersoon
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-02T08:12:12.840Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-10T12:50:17.442Z[Etc/UTC]")
 public class NaamPersoon {
   public static final String SERIALIZED_NAME_GESLACHTSNAAM = "geslachtsnaam";
   @SerializedName(SERIALIZED_NAME_GESLACHTSNAAM)
@@ -52,7 +52,7 @@ public class NaamPersoon {
 
   public static final String SERIALIZED_NAME_IN_ONDERZOEK = "inOnderzoek";
   @SerializedName(SERIALIZED_NAME_IN_ONDERZOEK)
-  private NaamInOnderzoek inOnderzoek;
+  private NaamInOnderzoekUitgebreid inOnderzoek = null;
 
   public static final String SERIALIZED_NAME_AANHEF = "aanhef";
   @SerializedName(SERIALIZED_NAME_AANHEF)
@@ -171,7 +171,7 @@ public class NaamPersoon {
   }
 
 
-  public NaamPersoon inOnderzoek(NaamInOnderzoek inOnderzoek) {
+  public NaamPersoon inOnderzoek(NaamInOnderzoekUitgebreid inOnderzoek) {
     
     this.inOnderzoek = inOnderzoek;
     return this;
@@ -184,12 +184,12 @@ public class NaamPersoon {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public NaamInOnderzoek getInOnderzoek() {
+  public NaamInOnderzoekUitgebreid getInOnderzoek() {
     return inOnderzoek;
   }
 
 
-  public void setInOnderzoek(NaamInOnderzoek inOnderzoek) {
+  public void setInOnderzoek(NaamInOnderzoekUitgebreid inOnderzoek) {
     this.inOnderzoek = inOnderzoek;
   }
 

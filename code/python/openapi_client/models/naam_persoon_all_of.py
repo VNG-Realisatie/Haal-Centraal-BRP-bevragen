@@ -38,7 +38,8 @@ class NaamPersoonAllOf(object):
         'regel_voorafgaand_aan_aanschrijfwijze': 'str',
         'gebruik_in_lopende_tekst': 'str',
         'aanduiding_naamgebruik': 'NaamgebruikEnum',
-        'adellijke_titel_predikaat': 'Waardetabel'
+        'adellijke_titel_predikaat': 'Waardetabel',
+        'in_onderzoek': 'NaamInOnderzoekUitgebreid'
     }
 
     attribute_map = {
@@ -47,10 +48,11 @@ class NaamPersoonAllOf(object):
         'regel_voorafgaand_aan_aanschrijfwijze': 'regelVoorafgaandAanAanschrijfwijze',
         'gebruik_in_lopende_tekst': 'gebruikInLopendeTekst',
         'aanduiding_naamgebruik': 'aanduidingNaamgebruik',
-        'adellijke_titel_predikaat': 'adellijkeTitelPredikaat'
+        'adellijke_titel_predikaat': 'adellijkeTitelPredikaat',
+        'in_onderzoek': 'inOnderzoek'
     }
 
-    def __init__(self, aanhef=None, aanschrijfwijze=None, regel_voorafgaand_aan_aanschrijfwijze=None, gebruik_in_lopende_tekst=None, aanduiding_naamgebruik=None, adellijke_titel_predikaat=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, aanhef=None, aanschrijfwijze=None, regel_voorafgaand_aan_aanschrijfwijze=None, gebruik_in_lopende_tekst=None, aanduiding_naamgebruik=None, adellijke_titel_predikaat=None, in_onderzoek=None, local_vars_configuration=None):  # noqa: E501
         """NaamPersoonAllOf - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -62,6 +64,7 @@ class NaamPersoonAllOf(object):
         self._gebruik_in_lopende_tekst = None
         self._aanduiding_naamgebruik = None
         self._adellijke_titel_predikaat = None
+        self._in_onderzoek = None
         self.discriminator = None
 
         if aanhef is not None:
@@ -76,6 +79,8 @@ class NaamPersoonAllOf(object):
             self.aanduiding_naamgebruik = aanduiding_naamgebruik
         if adellijke_titel_predikaat is not None:
             self.adellijke_titel_predikaat = adellijke_titel_predikaat
+        if in_onderzoek is not None:
+            self.in_onderzoek = in_onderzoek
 
     @property
     def aanhef(self):
@@ -210,6 +215,27 @@ class NaamPersoonAllOf(object):
         """
 
         self._adellijke_titel_predikaat = adellijke_titel_predikaat
+
+    @property
+    def in_onderzoek(self):
+        """Gets the in_onderzoek of this NaamPersoonAllOf.  # noqa: E501
+
+
+        :return: The in_onderzoek of this NaamPersoonAllOf.  # noqa: E501
+        :rtype: NaamInOnderzoekUitgebreid
+        """
+        return self._in_onderzoek
+
+    @in_onderzoek.setter
+    def in_onderzoek(self, in_onderzoek):
+        """Sets the in_onderzoek of this NaamPersoonAllOf.
+
+
+        :param in_onderzoek: The in_onderzoek of this NaamPersoonAllOf.  # noqa: E501
+        :type: NaamInOnderzoekUitgebreid
+        """
+
+        self._in_onderzoek = in_onderzoek
 
     def to_dict(self):
         """Returns the model properties as a dict"""

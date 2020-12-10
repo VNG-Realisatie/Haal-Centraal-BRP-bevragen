@@ -23,67 +23,37 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.openapitools.client.model.DatumOnvolledig;
-import org.openapitools.client.model.RedenOpschortingBijhoudingEnum;
 
 /**
- * * **datum**: de datum waarop de bijhouding van de persoonsgegevens is gestaakt. 
+ * NaamInOnderzoekUitgebreidAllOf
  */
-@ApiModel(description = "* **datum**: de datum waarop de bijhouding van de persoonsgegevens is gestaakt. ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-10T12:50:17.442Z[Etc/UTC]")
-public class OpschortingBijhouding {
-  public static final String SERIALIZED_NAME_REDEN = "reden";
-  @SerializedName(SERIALIZED_NAME_REDEN)
-  private RedenOpschortingBijhoudingEnum reden;
-
-  public static final String SERIALIZED_NAME_DATUM = "datum";
-  @SerializedName(SERIALIZED_NAME_DATUM)
-  private DatumOnvolledig datum;
+public class NaamInOnderzoekUitgebreidAllOf {
+  public static final String SERIALIZED_NAME_ADELLIJKE_TITEL_PREDIKAAT = "adellijkeTitelPredikaat";
+  @SerializedName(SERIALIZED_NAME_ADELLIJKE_TITEL_PREDIKAAT)
+  private Boolean adellijkeTitelPredikaat;
 
 
-  public OpschortingBijhouding reden(RedenOpschortingBijhoudingEnum reden) {
+  public NaamInOnderzoekUitgebreidAllOf adellijkeTitelPredikaat(Boolean adellijkeTitelPredikaat) {
     
-    this.reden = reden;
+    this.adellijkeTitelPredikaat = adellijkeTitelPredikaat;
     return this;
   }
 
    /**
-   * Get reden
-   * @return reden
+   * Get adellijkeTitelPredikaat
+   * @return adellijkeTitelPredikaat
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public RedenOpschortingBijhoudingEnum getReden() {
-    return reden;
+  public Boolean getAdellijkeTitelPredikaat() {
+    return adellijkeTitelPredikaat;
   }
 
 
-  public void setReden(RedenOpschortingBijhoudingEnum reden) {
-    this.reden = reden;
-  }
-
-
-  public OpschortingBijhouding datum(DatumOnvolledig datum) {
-    
-    this.datum = datum;
-    return this;
-  }
-
-   /**
-   * Get datum
-   * @return datum
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public DatumOnvolledig getDatum() {
-    return datum;
-  }
-
-
-  public void setDatum(DatumOnvolledig datum) {
-    this.datum = datum;
+  public void setAdellijkeTitelPredikaat(Boolean adellijkeTitelPredikaat) {
+    this.adellijkeTitelPredikaat = adellijkeTitelPredikaat;
   }
 
 
@@ -95,23 +65,21 @@ public class OpschortingBijhouding {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    OpschortingBijhouding opschortingBijhouding = (OpschortingBijhouding) o;
-    return Objects.equals(this.reden, opschortingBijhouding.reden) &&
-        Objects.equals(this.datum, opschortingBijhouding.datum);
+    NaamInOnderzoekUitgebreidAllOf naamInOnderzoekUitgebreidAllOf = (NaamInOnderzoekUitgebreidAllOf) o;
+    return Objects.equals(this.adellijkeTitelPredikaat, naamInOnderzoekUitgebreidAllOf.adellijkeTitelPredikaat);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(reden, datum);
+    return Objects.hash(adellijkeTitelPredikaat);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class OpschortingBijhouding {\n");
-    sb.append("    reden: ").append(toIndentedString(reden)).append("\n");
-    sb.append("    datum: ").append(toIndentedString(datum)).append("\n");
+    sb.append("class NaamInOnderzoekUitgebreidAllOf {\n");
+    sb.append("    adellijkeTitelPredikaat: ").append(toIndentedString(adellijkeTitelPredikaat)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -154,6 +154,8 @@ Class | Method | HTTP request | Description
  - [KindLinks](docs/KindLinks.md)
  - [Naam](docs/Naam.md)
  - [NaamInOnderzoek](docs/NaamInOnderzoek.md)
+ - [NaamInOnderzoekUitgebreid](docs/NaamInOnderzoekUitgebreid.md)
+ - [NaamInOnderzoekUitgebreidAllOf](docs/NaamInOnderzoekUitgebreidAllOf.md)
  - [NaamPersoon](docs/NaamPersoon.md)
  - [NaamPersoonAllOf](docs/NaamPersoonAllOf.md)
  - [NaamgebruikEnum](docs/NaamgebruikEnum.md)

@@ -163,6 +163,8 @@ Class | Method | HTTP request | Description
  - [Model.KindLinks](docs/KindLinks.md)
  - [Model.Naam](docs/Naam.md)
  - [Model.NaamInOnderzoek](docs/NaamInOnderzoek.md)
+ - [Model.NaamInOnderzoekUitgebreid](docs/NaamInOnderzoekUitgebreid.md)
+ - [Model.NaamInOnderzoekUitgebreidAllOf](docs/NaamInOnderzoekUitgebreidAllOf.md)
  - [Model.NaamPersoon](docs/NaamPersoon.md)
  - [Model.NaamPersoonAllOf](docs/NaamPersoonAllOf.md)
  - [Model.NaamgebruikEnum](docs/NaamgebruikEnum.md)

@@ -44,7 +44,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="gebruikInLopendeTekst">Naam van persoon die je kunt gebruiken als je in lopende tekst (bijvoorbeeld in een brief) aan persoon refereert. .</param>
         /// <param name="aanduidingNaamgebruik">aanduidingNaamgebruik.</param>
         /// <param name="adellijkeTitelPredikaat">adellijkeTitelPredikaat.</param>
-        public NaamPersoon(string geslachtsnaam = default(string), string voorletters = default(string), string voornamen = default(string), string voorvoegsel = default(string), NaamInOnderzoek inOnderzoek = default(NaamInOnderzoek), string aanhef = default(string), string aanschrijfwijze = default(string), string regelVoorafgaandAanAanschrijfwijze = default(string), string gebruikInLopendeTekst = default(string), NaamgebruikEnum aanduidingNaamgebruik = default(NaamgebruikEnum), Waardetabel adellijkeTitelPredikaat = default(Waardetabel))
+        public NaamPersoon(string geslachtsnaam = default(string), string voorletters = default(string), string voornamen = default(string), string voorvoegsel = default(string), NaamInOnderzoekUitgebreid inOnderzoek = default(NaamInOnderzoekUitgebreid), string aanhef = default(string), string aanschrijfwijze = default(string), string regelVoorafgaandAanAanschrijfwijze = default(string), string gebruikInLopendeTekst = default(string), NaamgebruikEnum aanduidingNaamgebruik = default(NaamgebruikEnum), Waardetabel adellijkeTitelPredikaat = default(Waardetabel))
         {
             this.Geslachtsnaam = geslachtsnaam;
             this.Voorletters = voorletters;
@@ -90,7 +90,7 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets InOnderzoek
         /// </summary>
         [DataMember(Name="inOnderzoek", EmitDefaultValue=false)]
-        public NaamInOnderzoek InOnderzoek { get; set; }
+        public NaamInOnderzoekUitgebreid InOnderzoek { get; set; }
 
         /// <summary>
         /// Kun je gebruiken als aanhef in een brief gericht aan persoon. 
